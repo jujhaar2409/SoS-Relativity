@@ -482,11 +482,128 @@ Another property of 4-velocity is that its components are connected by an invari
     \label{eq:4vel-invariant}
 \end{equation}
 
-
-
 \section{Relativistic Laws of Motion}
 
+\subsection{Principle of Least action, Lagrangian and Hamiltonian}
 
+This principle states that a process will happen in such a way that a certain defined quantity called action is minimized over the process. The action is the integral of Lagrangian over time during the process. Based on the system we define the Lagrangian.
+
+In a simple Newtonian system where no forces act on a particle, the Lagrangian is simply the kinetic energy of the particle.
+
+The Hamiltonian of a system is generally representative of the total energy of a system and a simple relation exists between the Hamiltonian and the Lagrangian given by the following.
+
+\begin{equation}
+    H = \sum_i \dot X^i P^i - \mathcal{L}
+    \label{eq:ham-lag}
+\end{equation}
+
+Here $P^i$ represent the components of the particle's momentum.
+
+\subsection{Relativistic Action}
+
+In relativity, we define the action as the following.
+
+\begin{equation}
+    Action = -m \int_a^b d\tau = -m \int_a^b \sqrt{1-v^2} dt
+    \label{eq:rel-action}
+\end{equation}
+
+This leads us to defining the Lagrangian for relativistic systems.
+
+\begin{equation}
+    \mathcal{L} = -m \sqrt{1 - v^2} = -m \sqrt{1 - (\dot X^i)^2} 
+    \label{eq:rel-lagrangian}
+\end{equation}
+
+If we rewrite this expression in terms of conventional units we obtain the following.
+
+\begin{equation}
+    \mathcal{L} = -mc^2 \sqrt{1 - \frac{v^2}{c^2}}
+    \label{eq:rel-lag-conventional}
+\end{equation}
+
+\subsection{Relativistic Momentum}
+
+In Lagrangian mechanics we define the moment as the derivative of the Lagrangian $\mathcal{L}$ with respect to $\dot X$. So now we try to extend this notion to try and define relativistic momentum.
+
+\begin{equation}
+    P^i = \pdv{\mathcal{L}}{\dot X^i}
+    \label{eq:rel-momentum}
+\end{equation}
+
+This gives us the following.
+
+\begin{equation}
+    P^i = \frac{mV^i}{\sqrt{1- \frac{v^2}{c^2}}} = mU^i = m \dv{X^i}{d\tau}
+    \label{eq:rel-momentum-2}
+\end{equation}
+
+\subsection{Relativistic Energy}
+
+To define energy, we take help of \eqref{eq:ham-lag} and try to extend its definition beyond what it is meant for. This gives us the following.
+
+\begin{equation}
+    H = \frac{m}{\sqrt{1-v^2}}
+    \label{eq:rel-energy}
+\end{equation}
+
+Interestingly this is the ``zeroth'' component of our relativistic momentum, given by \eqref{eq:mom-zeroth}.
+
+\begin{equation}
+    P^0 = mU^0 = H = \frac{m}{\sqrt{1-v^2}} 
+    \label{eq:mom-zeroth}
+\end{equation}
+ 
+This $P^0$ with our previously discovered $P^i$ gives us a 4-vector! The implications of this are that the energy and the momentum of a particle get mixed up during a lorentz transform. This is why
+we may find the particle having a momentum in one frame but not the other or another particle having energy in one frame but not the other. 
+
+Another important take away is that our previous notion of conservation of momentum now turns into the conservation of the 4-momentum instead.
+
+This energy written in conventional units gives us \eqref{eq:rel-energy-conventional}
+
+\begin{equation}
+    H = \frac{mc^2}{\sqrt{1-\frac{v^2}{c^2}}}
+    \label{eq:rel-energy-conventional}
+\end{equation}
+
+\subsubsection*{Slow Particles and $mc^2$}
+
+Now imagine the case of a particle for which $v$ is far less than the speed of light. This gives us the following relation using approximations.
+\begin{equation}
+    H = \frac{mc^2}{\sqrt{1-\frac{v^2}{c^2}}} = mc^2 \left(1 + \frac{v^2}{2c^2} \right) = \frac{1}{2} mv^2 + mc^2
+    \label{eq:rel-energy-slow}
+\end{equation}
+
+This tells us that when the particle is at rest, ie $v=0$, the energy of the particle will be given by the famous Einstein equation \eqref{eq:einstein}.
+
+\begin{equation}
+    E = mc^2
+    \label{eq:einstein}
+\end{equation}
+
+This quantity represents the energy of the body in a frame where it is at rest. This equation also famously represents mass-energy equality and is thus an equation of utmost importance.
+
+\subsubsection*{Relation between energy, momentum and mass}
+
+Now recall the relation \eqref{eq:4vel-invariant}. This relation defines the invariant quantity for 4-velocity. As it turns out, we can use it to arrive at a relation between the above mentioned quantities. We simply multiply the whole equation with $m^2$ and then substitute various quantities based on the definitions given by us. We finally obtain:
+
+\begin{equation}
+    E = \sqrt{P^2+m^2}
+    \label{eq:epm-relation}
+\end{equation}
+
+Rewriting this in conventional units gives us a less famous but equally important relation. 
+
+\begin{equation}
+    E = \sqrt{P^2c^2+m^2c^4}
+    \label{eq:epm-relation-conventional}
+\end{equation}
+
+This holds significance because it gives us a complete description of the energy term. It is valid in all cases including for particles with no mass, no momentum, etc.
+
+\section{Conclusion}
+
+With this we get to the end of this paper. While it has been short, I certainly hope that it was of value to the reader. One major objective was to explain what the whole fuss about the mystical relation between energy and mass is. I hope that this paper has been adequate to convey the relevance of the same.
 
 \end{document}
 
