@@ -53,6 +53,8 @@
 % \newtheorem{defn}[thm]{Definition} % definition numbers are dependent on theorem numbers
 % \newtheorem{exmp}[thm]{Example} % same for example numbers
 
+\usepackage{incgraph}
+
 \usepackage{blindtext}
 \usepackage[most]{tcolorbox}
 \newtcbtheorem[number within=section]{defn}{Definition}
@@ -81,7 +83,7 @@
 \author{
     Jujhaar Singh
 }
-\date{\formatdate{12}{6}{2021}}
+\date{}
 \makeatletter
 
 \usepackage{fancyhdr} % Headers and footers
@@ -103,6 +105,10 @@
 \begin{document}
 \pagenumbering{roman}
 
+\incgraph[documentpaper][width=\paperwidth,height=\paperheight]{img/cover-SoS.jpg}
+
+\pagebreak
+
 \begin{titlepage}
     \centering
     {\scshape\LARGE Summer of Science 2021 \par}
@@ -120,7 +126,7 @@
         {\large \@date \par}
     }\end{titlepage}
 
-\setcounter{page}{2}
+% \setcounter{page}{2}
 \pagebreak
 \thispagestyle{empty}
 \tableofcontents
@@ -460,7 +466,27 @@ This is just the counterpart to velocity for 4-Vectors. One major difference fro
     \label{eq:4-velocity}
 \end{gather}
 
+\subsection{More on 4-Velocity}
+
+There is an interesting relation between normal velocity and 4-Velocity. We will denote the 4-velocity using $U^i$ and the normal velocity using $V^i$.
+\begin{gather}
+    U^0 = \frac{1}{\sqrt{1 - v^2}}\\
+    U^i = \frac{V^i}{\sqrt{1 - v^2}}
+    \label{4vel-normalvel}
+\end{gather}
+
+Another property of 4-velocity is that its components are connected by an invariant. This is analogous to how proper time is an invariant for position represented by 4-vectors. This invariant quantity is equal to 1 and further implies that only any three components of the 4-velocity are independent and the fourth is a dependent.
+
+\begin{equation}
+    (U^0)^2 - (U^1)^2 - (U^2)^2 - (U^3)^2 = 1
+    \label{eq:4vel-invariant}
+\end{equation}
+
+
+
 \section{Relativistic Laws of Motion}
+
+
 
 \end{document}
 
